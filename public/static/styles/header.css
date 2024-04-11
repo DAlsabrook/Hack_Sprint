@@ -1,0 +1,140 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  background-color: white;
+  box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 0.2);
+}
+
+/* Logo container */
+.Header_logo_container {
+  display: flex;
+  align-items: center;
+}
+.header_logo {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-right: 1px solid lightgray;
+  height: 10px;
+}
+
+/* Logo img */
+.header_logo > div {
+  font-size: xx-large;
+  color: #5387c9;
+  margin-right: 5px;
+}
+
+/* Logo text */
+.header_logo > h1 {
+  font-size: 2em;
+}
+
+.header_logo_tagline {
+  margin-left: 10px;
+  color: grey;
+}
+
+.header_links {
+  display: flex;
+  align-items: center;
+  width: 250px;
+  justify-content: space-between;
+}
+
+.header_contact,
+.header_about {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  cursor: default;
+  font-size: large;
+  font-weight: bold;
+  justify-content: center;
+  align-items: center;
+}
+
+.header_contact_btn,
+.header_about_btn {
+  display: flex;
+  align-items: center;
+}
+
+.header_about_btn {
+  border-left: 1px solid lightgrey;
+  padding-left: 30px;
+}
+
+.header_contact_btn > i,
+.header_about_btn > i {
+  display: flex;
+  margin-right: 5px;
+  color: white;
+  background-color: #5387c9;
+  width: 30px;
+  height: 30px;
+  border-radius: 50px;
+  justify-content: center;
+  align-items: center;
+}
+/* Hide the dropdown content by default */
+.header_contact_dropdown,
+.header_about_dropdown {
+  position: absolute;
+  top: 100%;
+  padding: 10px;
+  display: none;
+  margin-top: 10px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+.header_about_dropdown {
+  margin-left: 60px;
+}
+
+/* Show the dropdown content when the parent div is hovered over */
+.header_contact:hover .header_contact_dropdown,
+.header_about:hover .header_about_dropdown {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  width: 150px;
+  background-color: #F5F5F5;
+  padding: 10px;
+}
+
+.header_contact_dropdown ul,
+.header_about_dropdown ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: -30px;
+}
+
+.header_contact_dropdown ul h3 {
+  text-align: center;
+}
+
+.header_contact_dropdown ul > li > .social {
+  font-size: x-large;
+  margin-right: 10px;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10px;
+}
+
+.header_hamburger {
+  font-size: x-large;
+  color: #5387c9;
+}

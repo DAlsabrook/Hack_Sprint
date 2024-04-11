@@ -1,0 +1,19 @@
+.footer {
+  background-color: #5387c9;
+  height: 200px;
+  display: flex;
+  flex-direction: row;
+  margin-top: 100px;
+}
+
+.footer_logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+}
+.footer_logo > div {
+  font-size: x-large;
+  margin-right: 10px;
+}
