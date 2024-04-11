@@ -1,3 +1,7 @@
+:root {
+  --primary-color: #5387c9;
+}
+
 header {
   display: flex;
   justify-content: space-between;
@@ -28,7 +32,7 @@ header {
 /* Logo img */
 .header_logo > div {
   font-size: xx-large;
-  color: #5387c9;
+  color: var(--primary-color);
   margin-right: 5px;
 }
 
@@ -77,7 +81,7 @@ header {
   display: flex;
   margin-right: 5px;
   color: white;
-  background-color: #5387c9;
+  background-color: var(--primary-color);
   width: 30px;
   height: 30px;
   border-radius: 50px;
@@ -136,5 +140,5 @@ header {
 
 .header_hamburger {
   font-size: x-large;
-  color: #5387c9;
+  color: var(--primary-color);
 }

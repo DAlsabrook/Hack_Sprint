@@ -1,5 +1,9 @@
+:root {
+  --primary-color: #5387c9;
+}
+
 .footer {
-  background-color: #5387c9;
+  background-color: var(--primary-color);
   height: 200px;
   display: flex;
   flex-direction: row;
