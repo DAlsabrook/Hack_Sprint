@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inspect Elements</title>
+    <!-- Tab image -->
+    <link rel="shortcut icon" href="static/images/BlueShallotRotated.png">
+
+    <!-- Font awesome for small logos -->
+    <script src="https://kit.fontawesome.com/b1191ab287.js" crossorigin="anonymous"></script>
+
+    <!-- CSS Styles -->
+    <link rel="stylesheet" type="text/css" href="static/styles/header.css">
+    <link rel="stylesheet" type="text/css" href="static/styles/body.css">
+    <link rel="stylesheet" type="text/css" href="static/styles/footer.css">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Youtube api -->
+    <script src="https://www.youtube.com/iframe_api"></script>
+    </head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+
+        <div class="Header_logo_container">
+            <div class="header_logo">
+                <img src="static/images/BlueOnion_NoBackground.png" alt="shallot">
+                <h1>The Shallot</h1>
+            </div>
+            <div class="header_logo_tagline">The best news.</div>
+        </div>
+
+        <div class="header_links">
+            <div class="header_contact">
+                <div class="header_contact_btn">
+                    <i class="fa-solid fa-address-card"></i>
+                    <a class="header_contact_text">Contact</a>
+                </div>
+                <div class="header_contact_dropdown">
+                    <ul class="david_social_list">
+                        <li>
+                            <h3>David Alsabrook</h3>
+                        </li>
+                        <li class="dropdown_social">
+                            <div class="social"><a href="https://www.linkedin.com/in/david-alsabrook/" target="_blank" rel="noopener" class="fa-brands fa-linkedin"></a></div>
+                            <div class="social"><a href="https://github.com/DAlsabrook" target="_blank" rel="noopener" class="fa-brands fa-github"></a></div>
+                        </li>
+                    </ul>
+                    <ul class="taylor_social_list">
+                        <li>
+                            <h3>Taylor Green</h3>
+                        </li>
+                        <li class="dropdown_social">
+                            <div class="social"><a href="https://www.linkedin.com/in/taylor-green-aa04a02ab/" target="_blank" rel="noopener" class="fa-brands fa-linkedin"></a></div>
+                            <div class="social"><a href="https://github.com/GreenTaylor27" target="_blank" rel="noopener" class="fa-brands fa-github"></a></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="header_about">
+                <div class="header_about_btn">
+                    <i class="fa-solid fa-clipboard-question"></i>
+                    <a class="header_about_text">About</a>
+                </div>
+                <div class="header_about_dropdown">
+                    <h4>text about how project works</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="sidebar_container">
+            <div class="header_hamburger fa-solid fa-bars"></div>
+        </div>
+    </header>
+
+    <!-- Main body -->
+    <main>
+        <div class="sidebar">
+            <h3>Sign in!</h3>
+            <div class="signin">
+                <input type="text" id="username" placeholder="Username">
+                <input type="text" id="password" placeholder="Password">
+                <button>Submit</button>
+            </div>
+        </div>
+        <section class="hero">
+            <div class="hero_carousel">
+                <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="static/images/download.jpeg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="static/images/download.jpeg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="static/images/download.jpeg" class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+                <div class="under_carousel">
+                    <h1>The Shallot Click Drive</h1>
+                    <h6>Welcome To The Shallot Click Drive. Thanks to the generous clicks of readers like yourself, we’re able to keep
+                    invaluable journalistic projects going</h6>
+                </div>
+            </div>
+            <div class="hero_trending">
+                <div class="divider">
+                    <h4 style="color: black;">Trending</h4>
+                    <div class="divider_line"></div>
+                </div>
+                <div class="trending_articles">
+                    <div class="trending_article">
+                        <h4>The shallot has used the funds from its click drive to purchar a jetski</h4>
+                    </div>
+                    <div class="trending_article">
+                        <h4>The shallot has used the funds from its click drive to purchar a jetski</h4>
+                    </div>
+                    <div class="trending_article">
+                        <h4>The shallot has used the funds from its click drive to purchar a jetski</h>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="watch">
+            <div class="divider">
+                <h4>Watch</h4>
+                <div class="divider_line"></div>
+            </div>
+            <div class="watch_container">
+                <div class="youtube_video_container">
+                <div id="player"></div>
+                </div>
+            </div>
+        </section>
+        <section class="articles">
+            <div class="divider">
+                <h4>Articles</h4>
+                <div class="divider_line"></div>
+            </div>
+            <div class="articles_container">
+                <div class="big_article_container">
+                    <article class="big_article">
+                        <img src="static/images/download.jpeg" style="height: 350px;" alt="">
+                        <h1>Fake News</h1>
+                        <h3>This is a BIG article made to report on the fake news everywhere</h1>
+                    </article>
+                    <article class="big_article">
+                        <img src="static/images/download.jpeg" style="height: 350px;" alt="">
+                        <h1>Fake News</h1>
+                        <h3>This is a BIG article made to report on the fake news everywhere</h1>
+                    </article>
+                </div>
+                <div class="small_articles_container">
+                    <div class="small_article_container_left">
+                        <article class="small_article">
+                            <img src="static/images/download.jpeg" style="height: 150px;" alt="">
+                            <h1>Fake News</h1>
+                            <h3>This is an article made to report on the fake news everywhere</h1>
+                        </article>
+                        <article class="small_article">
+                            <img src="static/images/download.jpeg" style="height: 150px;" alt="">
+                            <h1>Fake News</h1>
+                            <h3>This is an article made to report on the fake news everywhere</h1>
+                        </article>
+                        <article class="small_article">
+                            <img src="static/images/download.jpeg" style="height: 150px;" alt="">
+                            <h1>Fake News</h1>
+                            <h3>This is an article made to report on the fake news everywhere</h1>
+                        </article>
+                    </div>
+                    <div class="small_article_container_right">
+                        <article class="small_article">
+                            <img src="static/images/download.jpeg" style="height: 150px;" alt="">
+                            <h1>Fake News</h1>
+                            <h3>This is an article made to report on the fake news everywhere</h1>
+                        </article>
+                        <article class="small_article">
+                            <img src="static/images/download.jpeg" style="height: 150px;" alt="">
+                            <h1>Fake News</h1>
+                            <h3>This is an article made to report on the fake news everywhere</h1>
+                        </article>
+                        <article class="small_article">
+                            <img src="static/images/download.jpeg" style="height: 150px;" alt="">
+                            <h1>Fake News</h1>
+                            <h3>This is an article made to report on the fake news everywhere</h1>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer>
+        <div class="footer">
+            <div class="footer_logo">
+                    <img src="static/images/BlueOnion_NoBackground.png" alt="shallot">
+                    <h1>The Shallot</h1>
+            </div>
+            <div class="footer_copyright">
+                <i class="fa-regular fa-copyright"></i>
+                <h6>Not a Copyright</h6>
+                <h6>2024 "The Shallot isnt real" LLC</h6>
+            </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <!-- jQuery library and files -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="static/scripts/index.js"></script>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body>
+
+</html>
