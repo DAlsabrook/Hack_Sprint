@@ -1,3 +1,5 @@
+// Create an aiArticles list and dynamically change the articles when puzzles are done
+
 $(document).ready(function () {
   // Dynamically ad articles
   const normalArticles = [
@@ -19,6 +21,7 @@ $(document).ready(function () {
   $('.trending_2').find('.article').text(normalArticles[11].article);
   $('.trending_3').find('.article').text(normalArticles[8].article);
   $('.trending_4').find('.article').text(normalArticles[9].article);
+
   // big articles
   $('.big_article_1').find('.title').text(normalArticles[6].title);
   $('.big_article_1').find('.article').text(normalArticles[6].article);
