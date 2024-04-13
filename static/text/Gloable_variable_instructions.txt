@@ -1,0 +1,8 @@
+Global variables and methods:
+  - (window.puzzleCount) is used to keep track of the number of puzzles
+
+  - (window.incrementPuzzleCount) is used to increment the puzzle count by 1
+
+  - (window.updateMessage) is used to update the "message" in boss "emails"
+
+  - (window.updateConsole) is used to update the "console" message
