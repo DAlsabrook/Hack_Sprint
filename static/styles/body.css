@@ -277,10 +277,12 @@ main {
   margin: 5px;
 }
 
+/* remove top right x */
 .ui-dialog .ui-dialog-titlebar-close {
   visibility: hidden;
 }
 
+/* all dialog boxes */
 .ui-dialog {
   box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 0.75);
   position: fixed !important;
@@ -291,4 +293,55 @@ main {
   flex-direction: column;
   padding: 20px;
   border-top: 1px solid lightgray;
+}
+
+/* html inspect */
+.ui-dialog .code pre {
+  background-color: #252525;
+}
+
+.ui-dialog .code pre code span {
+  text-shadow: none !important;
+}
+
+.ui-dialog .code pre code {
+  text-shadow: none !important;
+  color: white !important;
+}
+
+/* tag names */
+.token.boolean,
+.token.constant,
+.token.deleted,
+.token.number,
+.token.property,
+.token.symbol,
+.token.tag,
+.token.punctuation {
+  color: rgb(127, 142, 211) !important;
+}
+
+/* tag attributes */
+.token.attr-name,
+.token.builtin,
+.token.char,
+.token.inserted,
+.token.selector,
+.token.string {
+  color: rgb(166, 199, 252) !important;
+}
+
+/* attribute text */
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+  color: #dfb08ad7 !important;
+}
+
+/* comments */
+.token.cdata,
+.token.comment,
+.token.doctype,
+.token.prolog {
+  color: #4eb36f !important;
 }

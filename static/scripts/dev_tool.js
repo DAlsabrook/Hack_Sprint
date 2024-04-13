@@ -21,23 +21,28 @@ $(document).ready(function () {
   });
 
   $(document).on('click', '.inspect', function () {
-    $('<div title="inspect"></div>').dialog({
-      position: { my: "center", at: "center", of: window },
-      draggable: false,
-      buttons: {
-        Close: function () {
-          $(this).dialog("close");
+    $.get('static/text/Html.txt', function (data) {
+      $('<div title="inspect" class="code"><pre><code class="language-markup"></code></pre></div>').find('code').text(data).end().dialog({
+        width: window.innerWidth * 0.75,
+        height: window.innerHeight * 0.75,
+        position: { my: "center", at: "center", of: window },
+        draggable: false,
+        buttons: {
+          Close: function () {
+            $(this).dialog("close");
+          }
+        },
+        open: function () {
+          Prism.highlightAll();
         }
-      }
+      });
     });
   });
-
 
   $(document).on('click', '.console', function () {
     // Open the dialog box
     consoleDialog.dialog('open');
   });
-
 
   $(document).on('click', '.messages', function () {
     // Open the dialog box
