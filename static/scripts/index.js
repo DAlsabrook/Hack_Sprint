@@ -1,10 +1,32 @@
 $(document).ready(function () {
+  // YOUTUBE video
+  // Set up the youtube player, give size and video id
+  var player;
+  YT.ready(function () {
+    player = new YT.Player('player', {
+      height: '350',
+      width: '630',
+      videoId: 'ubFq-wV3Eic',
+      origin: window.location.origin,
+      playerVars: {
+        autoplay: 0 // 0 = false, 1 = true
+      }
+    });
+  });
+
+  $('#player').on('click', function () {
+    if (player.getPlayerState() === YT.PlayerState.PLAYING) {
+      player.pauseVideo();
+    } else {
+      player.playVideo();
+    }
+  });
 
   // Initialize the global puzzleCount variable
   window.puzzleCount = 0;
   if (window.puzzleCount === 0) {
     // Start dev tools with no issues
-    window.updateMessage('We are having issues with the website. Please try to fix it');
+    window.updateMessage('We are having issues with the website. Please try to sign in and find the issues');
     window.updateConsole('No issues');
   }
   // Function to increment the puzzle count
@@ -32,57 +54,35 @@ $(document).ready(function () {
     $(".sidebar").toggleClass('sidebar-closed');
   });
 
-  // SIGNING button click event
+  // SIGNIN button click event
   $('.signin button').on('click', function () {
     var username = $('#username').val();
     var password = $('#password').val();
-    var correctUsername = 'admin';
-    var correctPassword = 'admin';
+    var correctUsername = 'admin_'; // The correct username
+    var correctPassword = 'admin'; // The correct password
     console.log("Button clicked")
-    if (username === correctUsername && password === correctPassword) {
-      alert('Correct!');
-    } else {
-      alert('Incorrect. Please try again.');
-    }
-  });
-
-  // YOUTUBE video
-  // Set up the youtube player, give size and video id
-  var player;
-  YT.ready(function () {
-    player = new YT.Player('player', {
-      height: '390',
-      width: '640',
-      videoId: 'tgbNymZ7vqY',
-      origin: window.location.origin,
-      events: {
-        'onReady': onPlayerReady,
-        'onStateChange': onPlayerStateChange
-      }
-    });
-  });
-
-  function onPlayerReady(event) {
-    event.target.playVideo();
-  }
-
-  function onPlayerStateChange(event) {
-    secondsToPlay = 5;
-    if (event.data == YT.PlayerState.PLAYING) {
-      setTimeout(stopVideo, (secondsToPlay * 1000));
-    }
-  }
-
-  function stopVideo() {
-    if (player && typeof player.stopVideo === 'function') {
-      player.stopVideo();
-    }
-  }
-  $('#player').on('click', function () {
-    if (player.getPlayerState() === YT.PlayerState.PLAYING) {
-      player.pauseVideo();
-    } else {
+    // This all just handles sign in check marks to tell user if they got the right answer
+    if (username === correctUsername && password !== correctPassword) {
       player.playVideo();
+      $('.username_container').find('.blank').removeClass('fa-solid fa-circle-xmark').addClass('fa-solid fa-check');
+      $('.password_container').find('.blank').removeClass('fa-solid fa-check').addClass('fa-solid fa-circle-xmark');
+    } else if (username === correctUsername && password === correctPassword) {
+      $('.username_container').find('.blank').removeClass('fa-solid fa-circle-xmark').addClass('fa-solid fa-check');
+      $('.password_container').find('.blank').removeClass('fa-solid fa-circle-xmark').addClass('fa-solid fa-check');
+    } else if (username !== correctUsername && password === correctPassword) {
+      $('.username_container').find('.blank').removeClass('fa-solid fa-check').addClass('fa-solid fa-circle-xmark');
+      $('.password_container').find('.blank').removeClass('fa-solid fa-circle-xmark').addClass('fa-solid fa-check');
+    } else if (username !== correctUsername && password !== correctPassword) {
+      $('.username_container').find('.blank').removeClass('fa-solid fa-check').addClass('fa-solid fa-circle-xmark');
+      $('.password_container').find('.blank').removeClass('fa-solid fa-check').addClass('fa-solid fa-circle-xmark');
     }
   });
 });
+
+
+// possible resources for ai news articles
+// https://www.washingtonpost.com/technology/2023/12/17/ai-fake-news-misinformation/
+// https://www.wilsoncenter.org/blog-post/ai-poses-risks-both-authoritarian-and-democratic-politics
+
+// how to spot ai content
+// https://originality.ai/blog/how-to-detect-ai-generated-articles

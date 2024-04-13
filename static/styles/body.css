@@ -87,13 +87,22 @@ main {
   border-bottom: 1px solid lightgray;
 }
 
+/* INSPECTION AD */
+.admin_ {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin-bottom: 50px;
+  margin-top: 30px;
+}
+
 /* WATCH SECTION */
 .watch {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 100px;
   width: 90%;
 }
 
