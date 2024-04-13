@@ -26,7 +26,7 @@ $(document).ready(function () {
   if (window.puzzleCount === 0) {
     // Start dev tools with no issues and start message to point user in the right direction
     window.updateMessage('The site is being really weird. Give it a good look through please.\
-    Use our in house dev tool to inspect the page and see if you can find anything weird.');
+    Inspect the page and see if you can find anything weird in the source code.');
     $('.chat_container').css('background-color', 'red');
   }
 
