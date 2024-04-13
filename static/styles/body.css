@@ -221,3 +221,127 @@ main {
   font-size: 1em;
   margin: 10px;
 }
+
+/* DEV TOOL SECTION */
+.dev_tool_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 200px;
+  height: 50px;
+  border-radius: 50px;
+  background-color: lightgrey;
+  cursor: pointer;
+  box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.75);
+  transition: height 0.1s ease;
+  overflow: hidden;
+}
+
+.title_container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.title_container > i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2em;
+  border-radius: 50px;
+  background-color: white;
+  height: 30px;
+  width: 30px;
+  margin-left: 30px;
+}
+.dev_tool_title {
+  font-size: 1.5em;
+  margin-left: 10px;
+  width: 150px;
+}
+
+.dev_tool_open {
+  height: 200px;
+  padding: 30px;
+  cursor: default;
+  border-radius: 25px;
+}
+
+.dev_tool_open > button {
+  align-self: flex-start;
+  margin: 5px;
+}
+
+/* remove top right x */
+.ui-dialog .ui-dialog-titlebar-close {
+  visibility: hidden;
+}
+
+/* all dialog boxes */
+.ui-dialog {
+  box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 0.75);
+  position: fixed !important;
+}
+
+.message > span{
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border-top: 1px solid lightgray;
+}
+
+/* html inspect */
+.ui-dialog .code pre {
+  background-color: #252525;
+}
+
+.ui-dialog .code pre code span {
+  text-shadow: none !important;
+}
+
+.ui-dialog .code pre code {
+  text-shadow: none !important;
+  color: white !important;
+}
+
+/* tag names */
+.token.boolean,
+.token.constant,
+.token.deleted,
+.token.number,
+.token.property,
+.token.symbol,
+.token.tag,
+.token.punctuation {
+  color: rgb(127, 142, 211) !important;
+}
+
+/* tag attributes */
+.token.attr-name,
+.token.builtin,
+.token.char,
+.token.inserted,
+.token.selector,
+.token.string {
+  color: rgb(166, 199, 252) !important;
+}
+
+/* attribute text */
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+  color: #dfb08ad7 !important;
+}
+
+/* comments */
+.token.cdata,
+.token.comment,
+.token.doctype,
+.token.prolog {
+  color: #4eb36f !important;
+}
