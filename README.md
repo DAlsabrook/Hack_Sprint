@@ -9,4 +9,4 @@ For presentation:
     -Youtube api integration
     -Bootstrap
     -Hosting
-    -global variables for front end
+    -global variables for front end with javascript
