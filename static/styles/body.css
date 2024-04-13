@@ -2,6 +2,21 @@
   --primary-color: #5387c9;
 }
 
+/* Styling classes */
+.article {
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.article:hover {
+  transform: scale(1.02);
+  opacity: 0.9;
+}
+
+img {
+  border-radius: 5px;
+}
+
 header {
   padding: 20px;
 }
@@ -178,9 +193,8 @@ main {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  width: 50%;
+  max-width: 50%;
   margin: 10px;
-  padding: 10px;
   padding-left: 20px;
   border-left: 1px solid lightgray;
 }
@@ -192,6 +206,8 @@ main {
   width: 100%;
   padding: 10px;
   margin-top: 20px;
+  height: 370px;
+  overflow: hidden;
   border-bottom: 1px solid lightgray;
 }
 
