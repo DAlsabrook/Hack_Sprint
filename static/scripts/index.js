@@ -10,6 +10,7 @@ $(document).ready(function () {
   // Function to increment the puzzle count
   window.incrementPuzzleCount = function () {
     window.puzzleCount++;
+    // Update the message from "boss" and console when needed
     if (window.puzzleCount === 1) {
       // Finished 1 puzzle
       window.updateMessage('The website is still broken. Please fix it.');

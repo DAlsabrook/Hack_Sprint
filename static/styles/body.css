@@ -1,3 +1,9 @@
+/* HERO SECTION - carousel and trending*/
+/* TRENDING */
+/* WATCH SECTION - Youtube video section */
+/* ARTICLES SECTION - All articles*/
+/* DEV TOOL SECTION -prism overwrites and dev tool buttons*/
+
 :root {
   --primary-color: #5387c9;
 }
@@ -120,7 +126,6 @@ main {
 }
 
 /* ARTICLES SECTION */
-
 .articles {
   display: flex;
   flex-direction: column;

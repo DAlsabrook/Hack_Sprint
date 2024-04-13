@@ -23,8 +23,8 @@ $(document).ready(function () {
   $(document).on('click', '.inspect', function () {
     $.get('static/text/Html.txt', function (data) {
       $('<div title="inspect" class="code"><pre><code class="language-markup"></code></pre></div>').find('code').text(data).end().dialog({
-        width: window.innerWidth * 0.75,
-        height: window.innerHeight * 0.75,
+        width: window.innerWidth * 0.8,
+        height: window.innerHeight * 0.9,
         position: { my: "center", at: "center", of: window },
         draggable: false,
         buttons: {
