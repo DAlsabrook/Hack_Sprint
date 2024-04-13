@@ -14,21 +14,23 @@ $(document).ready(function () {
     });
   });
 
-  $('#player').on('click', function () {
-    if (player.getPlayerState() === YT.PlayerState.PLAYING) {
-      player.pauseVideo();
-    } else {
-      player.playVideo();
-    }
+  // Triggers when user clicks to pause video
+  $('#player-overlay').on('click', function () {
+    console.log('Error: Username not full. Must be "admin_123"')
+    player.pauseVideo();
   });
+
 
   // Initialize the global puzzleCount variable
   window.puzzleCount = 0;
   if (window.puzzleCount === 0) {
-    // Start dev tools with no issues
-    window.updateMessage('We are having issues with the website. Please try to sign in and find the issues');
-    window.updateConsole('No issues');
+    // Start dev tools with no issues and start message to point user in the right direction
+    window.updateMessage('The site is being really weird. Give it a good look through please.\
+    Use our in house dev tool to inspect the page and see if you can find anything weird.');
+    $('.chat_container').css('background-color', 'red');
   }
+
+
   // Function to increment the puzzle count
   window.incrementPuzzleCount = function () {
     window.puzzleCount++;
@@ -36,36 +38,38 @@ $(document).ready(function () {
     if (window.puzzleCount === 1) {
       // Finished 1 puzzle
       window.updateMessage('The website is still broken. Please fix it.');
-      window.updateConsole('Issue found: Broken website');
+      $('.chat_container').css('background-color', 'red'); // alert to new message
     } else if (window.puzzleCount === 2) {
       // finished 2 puzzles
       window.updateMessage('The website is still broken. Please fix it.');
-      window.updateConsole('Issue found: Broken website');
+      $('.chat_container').css('background-color', 'red'); // alert to new message
     } else if (window.puzzleCount === 3) {
       // finished 3 puzzles
       window.updateMessage('The website is still broken. Please fix it.');
-      window.updateConsole('Issue found: Broken website');
+      $('.chat_container').css('background-color', 'red'); // alert to new message
     }
   }
+
 
   // Add click event listener to the hamburger button
   $(".header_hamburger").on('click', function () {
     // Toggle the sidebar-open and sidebar-closed classes
     $(".sidebar").toggleClass('sidebar-closed');
   });
-
   // SIGNIN button click event
   $('.signin button').on('click', function () {
     var username = $('#username').val();
     var password = $('#password').val();
     var correctUsername = 'admin_'; // The correct username
     var correctPassword = 'admin'; // The correct password
-    console.log("Button clicked")
     // This all just handles sign in check marks to tell user if they got the right answer
     if (username === correctUsername && password !== correctPassword) {
-      player.playVideo();
+      if (window.puzzleCount === 0) {
+        player.playVideo();
+      }
       $('.username_container').find('.blank').removeClass('fa-solid fa-circle-xmark').addClass('fa-solid fa-check');
       $('.password_container').find('.blank').removeClass('fa-solid fa-check').addClass('fa-solid fa-circle-xmark');
+      window.incrementPuzzleCount();
     } else if (username === correctUsername && password === correctPassword) {
       $('.username_container').find('.blank').removeClass('fa-solid fa-circle-xmark').addClass('fa-solid fa-check');
       $('.password_container').find('.blank').removeClass('fa-solid fa-circle-xmark').addClass('fa-solid fa-check');
