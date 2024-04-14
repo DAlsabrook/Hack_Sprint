@@ -16,31 +16,35 @@ $(document).ready(function () {
     { title: "Atlantis Found, Nobody Surprised", article: "Long-lost city discovered; locals shrug it off as 'old news.'" },
     { title: "Dinosaurs Sue Over Portrayal", article: "T. rex claims films 'unfairly stereotype' dinosaurs as monstrous." }
   ];
-  // Trending articles
-  $('.trending_1').find('.article').text(normalArticles[10].article);
-  $('.trending_2').find('.article').text(normalArticles[11].article);
-  $('.trending_3').find('.article').text(normalArticles[8].article);
-  $('.trending_4').find('.article').text(normalArticles[9].article);
 
-  // big articles
-  $('.big_article_1').find('.title').text(normalArticles[6].title);
-  $('.big_article_1').find('.article').text(normalArticles[6].article);
-  $('.big_article_2').find('.title').text(normalArticles[7].title);
-  $('.big_article_2').find('.article').text(normalArticles[7].article);
+  window.setNormalArticles = function () {
+      // Trending articles
+    $('.trending_1').find('.article').text(normalArticles[10].article);
+    $('.trending_2').find('.article').text(normalArticles[11].article);
+    $('.trending_3').find('.article').text(normalArticles[8].article);
+    $('.trending_4').find('.article').text(normalArticles[9].article);
 
-  // left side articles
-  $('.sm_article_1').find('.title').text(normalArticles[0].title);
-  $('.sm_article_1').find('.article').text(normalArticles[0].article);
-  $('.sm_article_2').find('.title').text(normalArticles[1].title);
-  $('.sm_article_2').find('.article').text(normalArticles[1].article);
-  $('.sm_article_3').find('.title').text(normalArticles[2].title);
-  $('.sm_article_3').find('.article').text(normalArticles[2].article);
+    // big articles
+    $('.big_article_1').find('.title').text(normalArticles[6].title);
+    $('.big_article_1').find('.article').text(normalArticles[6].article);
+    $('.big_article_2').find('.title').text(normalArticles[7].title);
+    $('.big_article_2').find('.article').text(normalArticles[7].article);
 
-  // right side articles
-  $('.sm_article_4').find('.title').text(normalArticles[3].title);
-  $('.sm_article_4').find('.article').text(normalArticles[3].article);
-  $('.sm_article_5').find('.title').text(normalArticles[4].title);
-  $('.sm_article_5').find('.article').text(normalArticles[4].article);
-  $('.sm_article_6').find('.title').text(normalArticles[5].title);
-  $('.sm_article_6').find('.article').text(normalArticles[5].article);
+    // left side articles
+    $('.sm_article_1').find('.title').text(normalArticles[0].title);
+    $('.sm_article_1').find('.article').text(normalArticles[0].article);
+    $('.sm_article_2').find('.title').text(normalArticles[1].title);
+    $('.sm_article_2').find('.article').text(normalArticles[1].article);
+    $('.sm_article_3').find('.title').text(normalArticles[2].title);
+    $('.sm_article_3').find('.article').text(normalArticles[2].article);
+
+    // right side articles
+    $('.sm_article_4').find('.title').text(normalArticles[3].title);
+    $('.sm_article_4').find('.article').text(normalArticles[3].article);
+    $('.sm_article_5').find('.title').text(normalArticles[4].title);
+    $('.sm_article_5').find('.article').text(normalArticles[4].article);
+    $('.sm_article_6').find('.title').text(normalArticles[5].title);
+    $('.sm_article_6').find('.article').text(normalArticles[5].article);
+  }
+  window.setNormalArticles();
 });

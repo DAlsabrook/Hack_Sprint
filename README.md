@@ -10,3 +10,4 @@ For presentation:
     -Bootstrap
     -Hosting
     -global variables for front end with javascript
+    -storing progress on the client side

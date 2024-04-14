@@ -21,7 +21,7 @@ $(document).ready(function () {
   $(document).on('click', '.chat', function () {
     // Open the dialog box
     messageDialog.dialog('open');
-    $('.chat_container').css('background-color', 'lightgrey');
+    $('.notification').remove();
   });
 
 
