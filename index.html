@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inspect Elements</title>
+    <title>The Shallot</title>
     <!-- Tab image -->
     <link rel="shortcut icon" href="static/images/BlueShallotRotated.png">
 
@@ -154,7 +154,7 @@
                 </div>
             </div>
         </section>
-        <!-- Using this class for part of my username -->
+        <!-- This class is my username. Password further down. -->
         <div class="admin_">
             <img src="static/images/inspection_ad.jpg" style="height: 160px;" alt="">
             <img src="static/images/ai_ad.jpeg" style="height: 160px;" alt="">
@@ -166,7 +166,8 @@
             </div>
             <div class="watch_container">
                 <div class="youtube_video_container">
-                <div id="player"></div>
+                    <div id="player"></div>
+                    <div id="player-overlay"></div>
                 </div>
             </div>
         </section>
@@ -231,20 +232,39 @@
     <footer>
         <div class="footer">
             <div class="footer_logo">
-                    <img src="static/images/BlueOnion_NoBackground.png" alt="shallot">
-                    <h1>The Shallot</h1>
+                <img src="static/images/BlueOnion_NoBackground.png" alt="shallot">
+                <h1>The Shallot</h1>
             </div>
+            <!-- Class === password -->
+            <h6 class="password_"></h6>
             <div class="footer_copyright">
                 <i class="fa-regular fa-copyright"></i>
                 <h6>Not a Copyright</h6>
                 <h6>2024 "The Shallot isnt real" LLC</h6>
             </div>
     </footer>
-    <!-- Dev Tools -->
-    <div class="dev_tool_container">
+    <!-- Dev chat button -->
+    <div class="chat_container">
         <div class="title_container">
-            <i class="fa-solid fa-screwdriver-wrench"></i>
-            <h3 class="dev_tool_title">Dev Tools</h3>
+            <i class="fa-brands fa-rocketchat"></i>
+            <h3 class="chat_title">Chat</h3>
+            <h6 class="notification">1 new</h6>
+        </div>
+    </div>
+    <!-- Task manager -->
+    <div id="overlay"></div>
+    <div id="popup">
+        <div id="popup_header">
+            <h2>Task Manager</h2>
+            <h6>Program / Usage</h6>
+        </div>
+        <div id="popup_body">
+            <div id="task_box">
+                <ul style="list-style-type: none;">
+                    <li class="task_item">AI Overlord / 100%</li>
+                </ul>
+                <button id="task_submit">Remove</button>
+            </div>
         </div>
     </div>
     <!-- Bootstrap -->
@@ -254,7 +274,7 @@
     <!-- Youtube api -->
     <script src="https://www.youtube.com/iframe_api"></script>
     <script src="static/scripts/index.js"></script>
-    <script src="static/scripts/dev_tool.js"></script>
+    <script src="static/scripts/chat.js"></script>
     <script src="static/scripts/articles.js"></script>
 </body>
 
