@@ -196,7 +196,7 @@ header {
   position: fixed;
   top: 80px;
   right: -20px;
-  width: 250px;
+  width: 300px;
   height: 250px;
   background-color: #F5F5F5;
   z-index: 100;
@@ -227,21 +227,22 @@ header {
   box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 0.2);
 }
 
-#username {
+.username_container,
+.password_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center
+}
+#username,
+#password {
   border: 1px solid lightgrey;
   border-radius: 10px;
+  margin-left: 5px;
   height: 35px;
   width: 90%;
   text-align: center;
 }
-
-#password {
-  border: 1px solid lightgrey;
-  border-radius: 10px;
-  height: 35px;
-  width: 90%;
-  text-align: center;
- }
 
 .signin button {
   border: none;
@@ -253,6 +254,83 @@ header {
 }
 
 .signin>button:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.clippy_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.clippy_container>img {
+  height: 100px;
+}
+
+.task_container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 140px;
+  height: 130px;
+  margin-top: -10px;
+}
+
+.bubble {
+  position: relative;
+  background: #f9f9f9;
+  border-radius: 0.4em;
+  width: 105px;
+  padding: 10px;
+  text-align: center;
+  border: 1px solid black;
+}
+
+.bubble:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+  border-right-color: #f9f9f9;
+  border-left: 0;
+  border-top: 0;
+  margin-top: -10px;
+  margin-left: -10px;
+}
+
+.bubble:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 0;
+  height: 0;
+  border: 11px solid transparent;
+  border-right-color: black;
+  border-left: 0;
+  border-top: 0;
+  margin-top: -11px;
+  margin-left: -12px;
+}
+
+.task_container>#tM {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 115px;
+  margin-top: 20px;
+}
+
+.task_container>#tM:hover {
+  cursor: pointer;
   background-color: var(--primary-color);
   color: white;
 }
