@@ -225,6 +225,13 @@ header {
   justify-content: space-evenly;
   align-items: center;
   box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 0.2);
+  font-size: small;
+}
+
+/* Show password Button Styling */
+
+.ShowPasswordBtn {
+  justify-content: center;
 }
 
 .username_container,
