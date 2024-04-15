@@ -32,6 +32,7 @@ var messageDialog = $('<div title="Messages" class="chat"></div>').dialog({
   autoOpen: false,
   position: { my: "center", at: "center", of: window },
   draggable: false,
+  resizeable: false,
   width: 500,
   height: 400,
   buttons: {
