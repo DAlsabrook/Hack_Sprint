@@ -18,6 +18,9 @@ $(document).ready(function () {
   ];
 
   window.setNormalArticles = function () {
+    // Carousel
+    $('.under_carousel').find('.title').text(normalArticles[10].title);
+    $('.under_carousel').find('.article').text(normalArticles[10].article);
       // Trending articles
     $('.trending_1').find('.article').text(normalArticles[10].article);
     $('.trending_2').find('.article').text(normalArticles[11].article);
@@ -46,5 +49,8 @@ $(document).ready(function () {
     $('.sm_article_6').find('.title').text(normalArticles[5].title);
     $('.sm_article_6').find('.article').text(normalArticles[5].article);
   }
+  // dynamically change articles
   window.setNormalArticles();
+
+
 });
