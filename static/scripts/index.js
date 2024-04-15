@@ -36,22 +36,18 @@ $(document).ready(function () {
     <button id="tM">Task Manager</button></div></div>');
   }
 
-  // Load progress from users localStorage
+  // Load progress from users localStorage and update the message based on puzzle count
   window.puzzleCount = parseInt(localStorage.getItem('puzzleCount')) || 0;
-  if (window.puzzleCount === 0) {
-    // Start message to point user in the right direction
-    window.updateMessage('The site is being really weird. Give it a good look through please.\
-    Inspect the page and see if you can find anything weird in the source code.');
-  }
+  window.updateMessage();
 
-
-  // Function to increment the puzzle count
-  window.incrementPuzzleCount = function () {
-    window.puzzleCount++;
-    // Save progress to users localStorage
-    localStorage.setItem('puzzleCount', window.puzzleCount.toString());
+  // Function to update the message from "boss"
+  window.updateMessage = function () {
     // Update the message from "boss"
-    if (window.puzzleCount === 1) {
+    if (window.puzzleCount === 0) {
+      // Start message to point user in the right direction
+      window.updateMessage('The site is being really weird. Give it a good look through please.\
+      Inspect the page and see if you can find anything weird in the source code.');
+    } else if (window.puzzleCount === 1) {
       // Finished inspect puzzle
       window.updateMessage('We have no idea what is going on with the media player. Pause that disgusting video and possibly check the console for an error?');
     } else if (window.puzzleCount === 2) {
@@ -62,6 +58,16 @@ $(document).ready(function () {
       window.updateMessage('THANK THE LORD! You are in. Now please go remove that AI from our system.');
     }
     $('.title_container').append('<h6 class="notification">1 new</h6>');
+  }
+
+
+  // Function to increment the puzzle count
+  window.incrementPuzzleCount = function () {
+    window.puzzleCount++;
+    // Save progress to users localStorage
+    localStorage.setItem('puzzleCount', window.puzzleCount.toString());
+    // Update the message from "boss"
+    window.updateMessage();
   }
 
 
