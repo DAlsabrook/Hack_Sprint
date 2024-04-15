@@ -38,10 +38,9 @@ $(document).ready(function () {
 
   // Load progress from users localStorage and update the message based on puzzle count
   window.puzzleCount = parseInt(localStorage.getItem('puzzleCount')) || 0;
-  window.updateMessage();
 
   // Function to update the message from "boss"
-  window.updateMessage = function () {
+  window.loadMessages = function () {
     // Update the message from "boss"
     if (window.puzzleCount === 0) {
       // Start message to point user in the right direction
@@ -59,7 +58,8 @@ $(document).ready(function () {
     }
     $('.title_container').append('<h6 class="notification">1 new</h6>');
   }
-
+  // call to load messages when page opens
+  window.loadMessages();
 
   // Function to increment the puzzle count
   window.incrementPuzzleCount = function () {
@@ -67,7 +67,7 @@ $(document).ready(function () {
     // Save progress to users localStorage
     localStorage.setItem('puzzleCount', window.puzzleCount.toString());
     // Update the message from "boss"
-    window.updateMessage();
+    window.loadMessages();
   }
 
 
