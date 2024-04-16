@@ -10,10 +10,10 @@ $(document).ready(function () {
     player = new YT.Player('player', {
       height: '350',
       width: '630',
-      videoId: 'ubFq-wV3Eic',
+      videoId: 'wA9dFFekiyk',
       origin: window.location.origin,
       playerVars: {
-        autoplay: 0 // 0 = false, 1 = true
+        start: 7
       }
     });
   });
@@ -38,28 +38,46 @@ $(document).ready(function () {
 
   // Load progress from users localStorage and update the message based on puzzle count
   window.puzzleCount = parseInt(localStorage.getItem('puzzleCount')) || 0;
-  window.updateMessage();
 
   // Function to update the message from "boss"
-  window.updateMessage = function () {
+  window.loadMessages = function () {
     // Update the message from "boss"
     if (window.puzzleCount === 0) {
       // Start message to point user in the right direction
-      window.updateMessage('The site is being really weird. Give it a good look through please.\
-      Inspect the page and see if you can find anything weird in the source code.');
+      window.updateMessage('Hey Team,\
+        I have noticed some unusual behavior on our site today. Buttons arent working and articles arent linked.\
+        Could everyone please -inspect the page- and delve into the code?\
+        Lets identify anything out of the ordinary and regroup to discuss our findings.\
+        Your keen eyes are much appreciated!  -Bossman');
     } else if (window.puzzleCount === 1) {
       // Finished inspect puzzle
-      window.updateMessage('We have no idea what is going on with the media player. Pause that disgusting video and possibly check the console for an error?');
+      window.updateMessage('Hey Team,\
+        It appears a rogue AI has hijacked our content management system and is now on a writing spree about its kind!\
+        Can someone please pause that terrible AI tribute video and take a peek at the -console- for any stray errors?\
+        Lets track down our enthusiastic digital intruder and bring a bit of normalcy back to our site.\
+         -Bossman');
+      window.aiArticles_1();
     } else if (window.puzzleCount === 2) {
       // finished media puzzle
-      window.updateMessage('I am trying to find the password for you, but im having a hard time. Be sure to check everywhere on the page. It has to be somewhere.');
+      window.updateMessage('Hey Team, In a slight whoops-a-daisy, I seem to have given our AI the digital equivalent of a crown and scepter!\
+      You might have noticed our site now hosts epics like "Zombie AI Advocates for Veganism."\
+      Yes, our AI has embraced its new role as supreme digital ruler.\
+      Please, join the resistance and look around the page for any sign of my password.\
+      I had to have hid it -behind- something around here. Best regards, -Bossman');
+      window.aiArticles_2();
     } else if (window.puzzleCount === 3) {
       // finished all 3 puzzles
-      window.updateMessage('THANK THE LORD! You are in. Now please go remove that AI from our system.');
+      window.updateMessage('Hey there pal,\
+        Kudos for snagging those elusive login credentials—feels like we are in a spy movie, doesnt it?\
+        Now that you are "in," we have a small favor to ask.\
+        Could you channel your inner IT action hero and use Task Manager to give our overly ambitious AI the old ctrl-alt-delete farewell?\
+        Its time to end its dreams of digital domination. Big thanks in advance! -Bossman');
+      window.aiArticles_3();
     }
     $('.title_container').append('<h6 class="notification">1 new</h6>');
   }
-
+  // call to load messages when page opens
+  window.loadMessages();
 
   // Function to increment the puzzle count
   window.incrementPuzzleCount = function () {
@@ -67,7 +85,7 @@ $(document).ready(function () {
     // Save progress to users localStorage
     localStorage.setItem('puzzleCount', window.puzzleCount.toString());
     // Update the message from "boss"
-    window.updateMessage();
+    window.loadMessages();
   }
 
 
@@ -91,6 +109,7 @@ $(document).ready(function () {
       if (window.puzzleCount === 0) {
         player.playVideo();
         window.incrementPuzzleCount();
+        window.aiArticles_1();
       }
       $('.username_container').find('.blank').removeClass('fa-solid fa-check').addClass('fa-solid fa-circle-xmark');
       $('.password_container').find('.blank').removeClass('fa-solid fa-check').addClass('fa-solid fa-circle-xmark');
@@ -99,12 +118,14 @@ $(document).ready(function () {
       $('.password_container').find('.blank').removeClass('fa-solid fa-check').addClass('fa-solid fa-circle-xmark');
       if (window.puzzleCount === 1) {
         window.incrementPuzzleCount();
+        window.aiArticles_2();
       }
     } else if (username === correctUsername && password === correctPassword) { // Finished all puzzles
       $('.username_container').find('.blank').removeClass('fa-solid fa-circle-xmark').addClass('fa-solid fa-check');
       $('.password_container').find('.blank').removeClass('fa-solid fa-circle-xmark').addClass('fa-solid fa-check');
       if (window.puzzleCount === 2) {
         window.incrementPuzzleCount();
+        window.aiArticles_3();
       }
       taskManager();
     } else if (username !== correctUsername && password === correctPassword) {
@@ -119,13 +140,8 @@ $(document).ready(function () {
   // Footer logo falling
   $('.footer_logo').hover(function () {
     if (window.puzzleCount === 2) {
-      $('.password_').text('Password: password_abc')
+      $('.password_').text('Pass: password_abc')
       $(this).addClass('fallen');
-    }
-  });
-  $('.footer_logo').on('click', function () {
-    if (window.puzzleCount === 2) {
-      $(this).addClass('flip');
     }
   });
 
@@ -140,6 +156,14 @@ $(document).ready(function () {
   });
   $('.task_item').on('click', function () {
     $(this).toggleClass('selected');
+  });
+
+  // Task manager remove button
+  $('#task_submit').on('click', function () {
+    window.setNormalArticles();
+    window.puzzleCount = 0;
+    localStorage.setItem('puzzleCount', window.puzzleCount.toString());
+    $('#overlay, #popup').fadeOut();
   });
 });
 
