@@ -25,9 +25,7 @@ To play, simply visit the_shallot.com or preview the index.html file.
 There are buttons in the top left corner of the footer than you can use to change what puzzle you are on. The buttons are the same color as the footer background, so you will have to highlight the area to find them.
 
 
-  Challenges:
-    -Youtube api integration
-    -Bootstrap
-    -Hosting
-    -global variables for front end with javascript
-    -storing progress on the client side
+## Authors
+
+David Alsabrook (https://github.com/DAlsabrook)
+Taylor Green
