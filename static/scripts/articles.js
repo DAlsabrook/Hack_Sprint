@@ -3,33 +3,25 @@ $(document).ready(function () {
   $('.zero').on('click', function () {
     window.puzzleCount = 0;
     localStorage.setItem('puzzleCount', window.puzzleCount.toString());
-    $('.count').text('Puzzles done: ' + window.puzzleCount);
+    location.reload();
   });
 
   $('.one').on('click', function () {
     window.puzzleCount = 1;
     localStorage.setItem('puzzleCount', window.puzzleCount.toString());
-    $('.count').text('Puzzles done: ' + window.puzzleCount);
+    location.reload();
   });
 
   $('.two').on('click', function () {
     window.puzzleCount = 2;
     localStorage.setItem('puzzleCount', window.puzzleCount.toString());
-    $('.count').text('Puzzles done: ' + window.puzzleCount);
+    location.reload();
   });
 
   $('.three').on('click', function () {
     window.puzzleCount = 3;
     localStorage.setItem('puzzleCount', window.puzzleCount.toString());
-    $('.count').text('Puzzles done: ' + window.puzzleCount);
-  });
-  $('.count').text('Puzzles done: ' + window.puzzleCount);
-
-  // RESET button
-  $('.reset').on('click', function () {
-    window.puzzleCount = 0;
-    // Save progress to users localStorage
-    localStorage.setItem('puzzleCount', window.puzzleCount.toString());
+    location.reload();
   });
 
   // Dynamically ad articles

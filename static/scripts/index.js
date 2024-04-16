@@ -45,15 +45,15 @@ $(document).ready(function () {
     if (window.puzzleCount === 0) {
       // Start message to point user in the right direction
       window.updateMessage('Hey Team,\
-        I have noticed some unusual behavior on our site today—things are getting a bit weird.\
-        Could everyone please take a moment to inspect the page and delve into the code?\
+        I have noticed some unusual behavior on our site today. Buttons arent working and articles arent linked.\
+        Could everyone please -inspect the page- and delve into the code?\
         Lets identify anything out of the ordinary and regroup to discuss our findings.\
         Your keen eyes are much appreciated!  -Bossman');
     } else if (window.puzzleCount === 1) {
       // Finished inspect puzzle
       window.updateMessage('Hey Team,\
         It appears a rogue AI has hijacked our content management system and is now on a writing spree about its kind!\
-        Can someone please pause that terrible AI tribute video and take a peek at the console for any stray errors?\
+        Can someone please pause that terrible AI tribute video and take a peek at the -console- for any stray errors?\
         Lets track down our enthusiastic digital intruder and bring a bit of normalcy back to our site.\
          -Bossman');
       window.aiArticles_1();
@@ -63,7 +63,7 @@ $(document).ready(function () {
       You might have noticed our site now hosts epics like "Zombie AI Advocates for Veganism."\
       Yes, our AI has embraced its new role as supreme digital ruler.\
       Please, join the resistance and look around the page for any sign of my password.\
-      I had to have hid it behind something around here. Best regards, -Bossman');
+      I had to have hid it -behind- something around here. Best regards, -Bossman');
       window.aiArticles_2();
     } else if (window.puzzleCount === 3) {
       // finished all 3 puzzles
@@ -140,13 +140,8 @@ $(document).ready(function () {
   // Footer logo falling
   $('.footer_logo').hover(function () {
     if (window.puzzleCount === 2) {
-      $('.password_').text('Password: password_abc')
+      $('.password_').text('Pass: password_abc')
       $(this).addClass('fallen');
-    }
-  });
-  $('.footer_logo').on('click', function () {
-    if (window.puzzleCount === 2) {
-      $(this).addClass('flip');
     }
   });
 

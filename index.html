@@ -77,7 +77,8 @@
                     <a class="header_about_text">About</a>
                 </div>
                 <div class="header_about_dropdown">
-                    <h4>text about how project works</h2>
+                    <h5>Explore an interactive website designed as a digital scavenger hunt, where hidden clues unravel a mysterious narrative,
+                    engaging users in a thrilling quest.</h5>
                 </div>
             </div>
         </div>
@@ -173,6 +174,12 @@
                     <div id="player"></div>
                     <div id="player-overlay"></div>
                 </div>
+                <div class="youtube_article">
+                    <h3 class="title">"AI Takeover: The Beat Drops... And It's Calculated"</h3>
+                    <h5 class="article">The latest YouTube sensation, "AI Takeover," isn't about robots seizing control—it's about them seizing the DJ booth.
+                    This chart-topping single, entirely composed and produced by an artificial intelligence, has critics both baffled and
+                    bobbing their heads. As AI continues to blur the lines between creator and creation.</h5>
+                </div>
             </div>
         </section>
         <section class="articles">
@@ -246,16 +253,17 @@
                 <h6>Not a Copyright</h6>
                 <h6>2024 "The Shallot isnt real" LLC</h6>
             </div>
-            <div class="puzzleCount" style="display: flex; flex-direction: row; margin-left: 20px; align-self: flex-start;">
-                <div class="change_count" style="display: flex; flex-direction: row;">
-                    <div class="zero" style="cursor: pointer; height: 25px; margin-right: 10px; color: #5387c9;">1</div>
-                    <div class="one" style="cursor: pointer; height: 25px; margin-right: 10px; color: #5387c9;">2</div>
-                    <div class="two" style="cursor: pointer; height: 25px; margin-right: 10px; color: #5387c9;">3</div>
-                    <div class="three" style="cursor: pointer; height: 25px; margin-right: 10px; color: #5387c9;">end</div>
-                </div>
-            </div>
-
+        </div>
     </footer>
+    <div class="puzzleCount" style="float: left; margin-top: -200px;">
+        <div class="change_count" style="display: flex; flex-direction: column;">
+            <div class="explain" style="cursor: default; font-size: larger; height: 25px; color: #5387c9;">This is for reseting puzzles:</div>
+            <div class="zero" style="cursor: default; font-size: larger; height: 25px; width: 25px; color: #5387c9;">(1)</div>
+            <div class="one" style="cursor: default; font-size: larger; height: 25px; width: 25px; color: #5387c9;">(2)</div>
+            <div class="two" style="cursor: default; font-size: larger; height: 25px; width: 25px; color: #5387c9;">(3)</div>
+            <div class="three" style="cursor: default; font-size: larger; height: 25px; width: 25px; color: #5387c9;">(end)</div>
+        </div>
+    </div>
     <!-- Dev chat button -->
     <div class="chat_container">
         <div class="title_container">
@@ -270,6 +278,21 @@
         <div id="popup_header">
             <h2>Task Manager</h2>
             <h6>Program / Usage</h6>
+        </div>
+        <div id="popup_body">
+            <div id="task_box">
+                <ul style="list-style-type: none;">
+                    <li class="task_item">AI Overlord / 100%</li>
+                </ul>
+                <button id="task_submit">Remove</button>
+            </div>
+        </div>
+    </div>
+    <!-- Soap Box -->
+    <div id="overlay2"></div>
+    <div id="popup2">
+        <div id="popup_header">
+            <h2>Task Manager</h2>
         </div>
         <div id="popup_body">
             <div id="task_box">

@@ -114,7 +114,7 @@ main {
   background: linear-gradient(90deg, black, #516c91, var(--primary-color));
   border-radius: 10px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   padding: 20px;
   justify-content: center;
 }
@@ -127,6 +127,10 @@ main {
   position: relative;
 }
 
+#player {
+    box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 1);
+}
+
 #player-overlay {
   position: absolute;
   top: 0;
@@ -134,6 +138,24 @@ main {
   width: 100%;
   height: 100%;
   background-color: transparent;
+}
+
+.youtube_article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  margin-top: 20px;
+  border-radius: 20px;
+  background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05), transparent);
+  padding: 20px;
+}
+.youtube_article > .title {
+  font-size: 1.5em;
+  font-weight: bold;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .divider {
@@ -332,55 +354,4 @@ main {
   flex-direction: column;
   padding: 20px;
   border-top: 1px solid lightgray;
-}
-
-/* html inspect */
-.ui-dialog .code pre {
-  background-color: #252525;
-}
-
-.ui-dialog .code pre code span {
-  text-shadow: none !important;
-}
-
-.ui-dialog .code pre code {
-  text-shadow: none !important;
-  color: white !important;
-}
-
-/* tag names */
-.token.boolean,
-.token.constant,
-.token.deleted,
-.token.number,
-.token.property,
-.token.symbol,
-.token.tag,
-.token.punctuation {
-  color: rgb(127, 142, 211) !important;
-}
-
-/* tag attributes */
-.token.attr-name,
-.token.builtin,
-.token.char,
-.token.inserted,
-.token.selector,
-.token.string {
-  color: rgb(166, 199, 252) !important;
-}
-
-/* attribute text */
-.token.atrule,
-.token.attr-value,
-.token.keyword {
-  color: #dfb08ad7 !important;
-}
-
-/* comments */
-.token.cdata,
-.token.comment,
-.token.doctype,
-.token.prolog {
-  color: #4eb36f !important;
 }
