@@ -18,7 +18,7 @@ Upon successfully logging in and disabling the AI, you will be redirected to a d
 
 ## To play
 
-To play, simply visit the_shallot.com or preview the index.html file.
+To play, simply visit the-shallot.com or preview the index.html file.
 
 ## Navigate the game without playing
 
