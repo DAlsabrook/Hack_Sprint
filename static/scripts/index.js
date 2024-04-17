@@ -147,7 +147,6 @@ $(document).ready(function () {
 
   // Task Manager button click event
   $(document).on('click', '#tM', function () {
-    console.log('clicked');
     $('#overlay, #popup').fadeIn();
   });
 
@@ -164,6 +163,38 @@ $(document).ready(function () {
     window.puzzleCount = 0;
     localStorage.setItem('puzzleCount', window.puzzleCount.toString());
     $('#overlay, #popup').fadeOut();
+    $('#popup2 #popup_body').html(`
+      <h2>Reality Revealed: Navigating AI's Impact in Our Digital Content</h2>
+      <p>Congratulations on completing your journey through our digital escapade! Crafted as a cornerstone of our school project centered around "reality," this experience was designed to spotlight the influence of AI in media by making its involvement blatantly obvious—a stark contrast to the more subtle ways AI blends into everyday digital environments.</p>
+      <h3>AI in Digital Media</h3>
+      <p>Our project's deliberate emphasis on AI's role serves as a metaphor for the nuanced integration of technology in content creation. The exaggerated AI manipulation provided a clear, albeit dramatized, glimpse into how technology can shape narratives, highlighting the importance of awareness in less overt real-world applications.</p>
+      <h3>Spectrum of Influence</h3>
+      <p>While AI's manipulation in our game was easy to detect, real-world AI often operates under the radar, subtly influencing perceptions without the clear markers we provided. This hidden influence can shape public opinion and media narratives without the overt signs typical of our project. In more specific terms:</p>
+      <ul>
+          <li><strong>Political Campaigns:</strong> AI can be used to tailor messages that resonate with specific demographics, potentially swaying voter behavior by amplifying certain viewpoints or suppressing others.</li>
+          <li><strong>Corporate Influence:</strong> Companies can deploy AI to craft highly targeted advertising that not only sells products but also shapes consumer attitudes and beliefs toward corporate practices and industry standards.</li>
+          <li><strong>Media Polarization:</strong> AI can be utilized by media outlets to create content that intensifies societal divisions, feeding into the echo chambers that pit one group against another, thus heightening conflict and engagement through controversy.</li>
+      </ul>
+      <h3>Strategies to Detect AI in Media</h3>
+      <p>Detecting AI's touch in everyday media consumption requires a critical eye. Here are refined strategies to help you discern the subtleties of AI-generated content:</p>
+      <ul>
+          <li><strong>Subtle Precision:</strong> Look for content that lacks the natural imperfections of human writing—too polished, too perfect, which might signal AI involvement.</li>
+          <li><strong>Recurring Patterns:</strong> AI tends to repeat certain phrases or structures. Notice when content feels unnaturally consistent or formulaic.</li>
+          <li><strong>Superficial Depth:</strong> AI often provides correct but shallow coverage of complex topics, missing the deeper insights a human expert might convey.</li>
+          <li><strong>Generic Statements:</strong> AI-generated text might avoid specifics, opting for broad statements that dont engage deeply with localized or nuanced aspects of topics.</li>
+          <li><strong>Source Transparency:</strong> Check the transparency of your information sources. Ethical publishers disclose AI involvement, maintaining a standard of integrity in their outputs.</li>
+      </ul>
+      <h3>Bringing It All Together</h3>
+      <p>Your navigation through our project, with its overt AI involvement, was designed to sharpen your awareness for the real world, where AIs influence might not always be so clearly marked. This experience serves as both a caution and a learning tool—a reminder that AIs integration into media often requires vigilance to detect.</p>
+      <h3>Conclusion</h3>
+      <p>As you move beyond this project, carry forward the lessons learned about the potential for AI to subtly alter our perceptions of reality. Stay curious, question the origins of the content you consume, and use your critical thinking to navigate the landscape of digital media. Thank you for diving into this exploration of our current reality. As AI continues to shape digital media, it's crucial to approach this influence with caution. Without vigilance, the impact on our personal lives and global issues could be profound and potentially detrimental.</p>
+      <h6>--ChatGPT</h6>
+      `);
+    $('#overlay2, #popup2').fadeIn();
+    $('#overlay2').on('click', function () {
+      $('#overlay2, #popup2').fadeOut();
+      location.reload();
+    });
   });
 });
 
