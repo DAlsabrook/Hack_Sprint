@@ -149,6 +149,7 @@ main {
   margin-top: 20px;
   border-radius: 20px;
   background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05), transparent);
+  box-shadow: 3px 3px 8px 6px rgba(0, 0, 0, 0.2);
   padding: 20px;
 }
 .youtube_article > .title {
