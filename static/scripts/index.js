@@ -197,11 +197,3 @@ $(document).ready(function () {
     });
   });
 });
-
-
-// possible resources for ai news articles
-// https://www.washingtonpost.com/technology/2023/12/17/ai-fake-news-misinformation/
-// https://www.wilsoncenter.org/blog-post/ai-poses-risks-both-authoritarian-and-democratic-politics
-
-// how to spot ai content
-// https://originality.ai/blog/how-to-detect-ai-generated-articles

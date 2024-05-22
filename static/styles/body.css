@@ -364,6 +364,23 @@ main {
   position: fixed !important;
 }
 
+.ui-dialog-content {
+  font-size: 1.5vw;
+}
+
+.ui-dialog-title {
+  font-size: 1.5vw;
+}
+
+.ui-button {
+  height: 4vw;
+  width: 8vw;
+}
+
+.ui-widget .ui-widget {
+  font-size: 1.5vw !important;
+}
+
 .chat > span{
   display: flex;
   flex-direction: column;
