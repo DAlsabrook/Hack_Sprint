@@ -76,27 +76,27 @@ $(document).ready(function () {
 
     // load images
     // Carousel
-    $('.carousel-item img').eq(0).attr('src', 'static/images/article_images/Town_hall.jpg');
-    $('.carousel-item img').eq(2).attr('src', 'static/images/article_images/town_hall_police.jpg');
-    $('.carousel-item img').eq(1).attr('src', 'static/images/article_images/town_hall_flock_academy.png');
+    $('.carousel-item img').eq(0).attr('src', 'static/images/article_images/Town_hall.jpg')
+    $('.carousel-item img').eq(2).attr('src', 'static/images/article_images/town_hall_police.jpg')
+    $('.carousel-item img').eq(1).attr('src', 'static/images/article_images/town_hall_flock_academy.png')
 
 
     // home inspection ad
-    $('.admin_ img').eq(0).attr('src', 'static/images/inspection_ad.jpg').css({ 'height': '160px' });
+    $('.admin_ img').eq(0).attr('src', 'static/images/inspection_ad.jpg').css({ 'height': '16vw' });
 
     // big articles
-    $('.big_article_1 img').attr('src', 'static/images/article_images/mercury.jpg').css({ 'height': '350px' });
-    $('.big_article_2 img').attr('src', 'static/images/article_images/podium.jpg').css({ 'height': '350px' });
+    $('.big_article_1 img').attr('src', 'static/images/article_images/mercury.jpg').css({ 'height': '30vw' });
+    $('.big_article_2 img').attr('src', 'static/images/article_images/podium.jpg').css({ 'height': '30vw' });
 
     // left side articles
-    $('.sm_article_1 img').attr('src', 'static/images/article_images/penguins.jpg').css({ 'height': '150px' });
-    $('.sm_article_2 img').attr('src', 'static/images/article_images/evil_cat.jpg').css({ 'height': '150px' });
-    $('.sm_article_3 img').attr('src', 'static/images/article_images/alien.jpg').css({ 'height': '150px' });
+    $('.sm_article_1 img').attr('src', 'static/images/article_images/penguins.jpg').css({ 'height': '15vw' });
+    $('.sm_article_2 img').attr('src', 'static/images/article_images/evil_cat.jpg').css({ 'height': '15vw' });
+    $('.sm_article_3 img').attr('src', 'static/images/article_images/alien.jpg').css({ 'height': '15vw' });
 
     // right side articles
-    $('.sm_article_4 img').attr('src', 'static/images/article_images/zombie.jpg').css({ 'height': '150px' });
-    $('.sm_article_5 img').attr('src', 'static/images/article_images/olympics.jpg').css({ 'height': '150px' });
-    $('.sm_article_6 img').attr('src', 'static/images/article_images/robot.jpg').css({ 'height': '150px' });
+    $('.sm_article_4 img').attr('src', 'static/images/article_images/zombie.jpg').css({ 'height': '15vw' });
+    $('.sm_article_5 img').attr('src', 'static/images/article_images/olympics.jpg').css({ 'height': '15vw' });
+    $('.sm_article_6 img').attr('src', 'static/images/article_images/robot.jpg').css({ 'height': '15vw' });
 
   }
   window.setNormalArticles();

@@ -8,8 +8,8 @@ $(document).ready(function () {
   var player;
   YT.ready(function () {
     player = new YT.Player('player', {
-      height: '350',
-      width: '630',
+      height: '100%',
+      width: '100%',
       videoId: 'wA9dFFekiyk',
       origin: window.location.origin,
       playerVars: {

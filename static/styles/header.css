@@ -6,8 +6,6 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-bottom: 20px;
-  padding-top: 20px;
   position: fixed;
   top: 0;
   width: 100%;
@@ -24,31 +22,32 @@ header {
 .header_logo {
   display: flex;
   align-items: center;
-  padding: 10px;
+  padding: 1vw;
   border-right: 1px solid lightgray;
-  height: 10px;
+  height: 3vw;
 }
 
 /* Logo img */
 .header_logo > img {
-  height: 70px;
+  height: 6vw;
   rotate: 30deg;
 }
 
 /* Logo text */
 .header_logo > h1 {
-  font-size: 2em;
+  font-size: 3vw;
 }
 
 .header_logo_tagline {
-  margin-left: 10px;
+  margin-left: 1vw;
   color: grey;
+  font-size: 1.5vw;
 }
 
 .header_links {
   display: flex;
   align-items: center;
-  width: 250px;
+  width: 20vw;
   justify-content: space-between;
 }
 
@@ -58,7 +57,7 @@ header {
   flex-direction: column;
   position: relative;
   cursor: default;
-  font-size: large;
+  font-size: 1.5vw;
   font-weight: bold;
   justify-content: center;
   align-items: center;
@@ -72,19 +71,19 @@ header {
 
 .header_about_btn {
   border-left: 1px solid lightgrey;
-  padding-left: 30px;
+  padding-left: 2.2vw;
 }
 
 /* Icons next to "contact" and "about" */
 .header_contact_btn > i,
 .header_about_btn > i {
   display: flex;
-  margin-right: 5px;
+  margin-right: .2vw;
   color: white;
   background-color: var(--primary-color);
-  width: 30px;
-  height: 30px;
-  border-radius: 50px;
+  width: 2.5vw;
+  height: 2.5vw;
+  border-radius: 2vw;
   justify-content: center;
   align-items: center;
 }
@@ -108,7 +107,7 @@ header {
 
 
 .header_about_dropdown {
-  margin-left: 60px;
+  margin-left: 5vw;
 }
 
 /* Show the dropdown content when the parent div is hovered over */
@@ -118,8 +117,8 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 250px;
-  width: 200px;
+  height: 23vw;
+  width: 17vw;
   background-color: #F5F5F5;
   padding: 10px;
   border-radius: 20px;
@@ -134,7 +133,7 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-radius: 10px;
+  border-radius: 1vw;
   box-shadow: 0px 1px 8px 0px rgba(0, 0, 0, 0.2);
 }
 
@@ -145,7 +144,7 @@ header {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin-left: -32px;
+  margin-left: -2vw;
 }
 
 /* Contact Dropdown individuals box*/
@@ -163,17 +162,18 @@ header {
   text-align: center;
   border-bottom: 1px solid lightgrey;
   width: 80%;
-  font-size: x-large;
+  font-size: 2vw;
 }
 
 /* Contact Dropdown social logos */
 .header_contact_dropdown ul > li > .social {
   font-size: x-large;
-  margin-right: 10px;
+  margin-right: 1vw;
   display: flex;
   flex-direction: row;
-  margin-bottom: 10px;
+  margin-bottom: 1vw;
   text-decoration: none;
+  font-size: 2vw;
 }
 
 /* SIDEBAR SECTION*/
@@ -187,15 +187,15 @@ header {
 }
 
 .header_hamburger {
-  font-size: x-large;
+  font-size: 2.5vw;
   color: var(--primary-color);
 }
 
 .sidebar {
   align-self: flex-end;
   position: fixed;
-  top: 80px;
-  right: -20px;
+  top: 7.5vw;
+  right: -2vw;
   width: 300px;
   height: 250px;
   background-color: #F5F5F5;
