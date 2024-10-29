@@ -12,6 +12,15 @@ On our site, you will encounter a series of puzzles that require critical thinki
 2. **YouTube Error**: After attempting to log in with incomplete credentials, a YouTube video will play. Pausing the video triggers an error message in the browser console, providing the next part of the credentials.
 3. **Logo Discovery**: The final clue is cleverly hidden behind the site logo in the footer. Hovering over the logo will cause it to pivot and "fall," revealing the full password.
 
+### Screen Shots
+![1716392932786](https://github.com/user-attachments/assets/f6289647-e8b7-4c46-b677-3333adca8097)
+![1716393038162](https://github.com/user-attachments/assets/a45b0ac9-a63f-47b3-afb4-95d286425fde)
+![1716393098943](https://github.com/user-attachments/assets/f3ec0400-83a3-4a46-ac5b-e45841e15bcb)
+![1716393167273](https://github.com/user-attachments/assets/f73c6919-03b3-4a02-a97c-ac699fd69beb)
+![1716393238798](https://github.com/user-attachments/assets/a3ab10d0-d0e5-4ce5-8d5d-d8ec06fa7d19)
+![1716393392348](https://github.com/user-attachments/assets/a320eadd-4f84-4355-be54-7fbd2b1f4f06)
+
+
 ## Game End
 
 Upon successfully logging in and disabling the AI, you will be redirected to a detailed essay discussing the dangers of AI-generated content. This essay highlights how AI's capability to generate convincing articles can influence public opinion and stresses the importance of awareness and skepticism among readers.
